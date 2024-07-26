@@ -13,9 +13,10 @@ public class LongestSubArray {
             if(nums[pos] == 1) {
                 pos++;
                 i++;
-            } else {
+
+            } else if(nums[pos] == 0) {
                 pos++;
-                j++;
+                j = 0;
 
 
                 while (pos < nums.length && nums[pos] == 1) {
