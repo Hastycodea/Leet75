@@ -4,7 +4,6 @@ public class RemoveStars {
     public static void main(String[] args) {
         String name = "lee**tco*de*";
         System.out.println(removeStars(name));
-        
     }
 
     public static String removeStars(String word) {
