@@ -1,7 +1,7 @@
 public class MaxVowels {
     public static void main(String[] args) {
 
-        int result = maxVowels("abciiidef", 3);
+        int result = maxVowels("leetcode", 3);
 
         System.out.println(result);
         
