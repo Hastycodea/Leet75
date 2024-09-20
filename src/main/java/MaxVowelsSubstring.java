@@ -24,20 +24,21 @@ public class MaxVowelsSubstring {
 
     public static int maxVowelsSubstring(String word, int k) {
         int result = 0;
-        int j = 0;
+        int window = 0;
 
-        while(j <= word.length() - k) {
-            String subWord = word.substring(j, k + j);
-
-            int vowelCount = 0;
-            for (int i = 0; i < k; i++) {
-                if(isVowel(subWord.charAt(i))) {
-                    vowelCount++;
-                }
-            }
-
-            result = Math.max(result, vowelCount);
+        for (int i = 0; i < k; i++) {
+            if(isVowel(word.charAt(i))) window++;
         }
+
+        result = window;
+
+        for(int j = k; j < word.length(); j++) {
+            if (isVowel(word.charAt(j))) window++;
+            if(isVowel(word.charAt(j - k))) window--;
+            result = Math.max(result, window);
+        }
+
+
         return result;
     }
 
