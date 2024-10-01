@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class MajorityElement {
     public static void main(String[] args) {
-        int[] nums = { 2, 2, 1, 1, 1, 2, 2 };
+        int[] nums = { 6, 5, 5 };
         System.out.println("Element 1 : " + majorityElement(nums));
         System.out.println("Element 2 : " + majorityElementTwo(nums));
         System.out.println("Element 3 : " + majorityElementThree(nums));
